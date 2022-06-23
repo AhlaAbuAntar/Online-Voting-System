@@ -8,7 +8,7 @@ dotenv.config();
 app.use(cors());
 
 const PORT = process.env.PORT;
-mongoose.connect(process.env.CONNECTION_LINK);
+mongoose.connect(process.env.CONNECTION_LINK!);
 
 import voteRouter from "./routes/vote";
 app.use("/vote", voteRouter);
