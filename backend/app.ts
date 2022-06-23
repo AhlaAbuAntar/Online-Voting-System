@@ -7,7 +7,7 @@ const app = express();
 dotenv.config();
 app.use(cors());
 
-const PORT = process.env.PORT;
+const PORT = 3000;
 mongoose.connect(process.env.CONNECTION_LINK!);
 
 import voteRouter from "./routes/vote";
