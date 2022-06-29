@@ -25,15 +25,15 @@
     <div id="main-container">
         <div class="chart-container">
             <div class="chart-title">Isch de schmoun en spasst?</div>
-            <div echarts [options]="chartOption" class="chart" [autoResize]="true"></div>
+            <div echarts [options]="chartData[0]" class="chart" [autoResize]="true"></div>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Isch de Alakxan en spasst?</div>
+            <div echarts [options]="chartData[1]" class="chart" [autoResize]="true"></div>
         </div>
         <div class="chart-container">
             <div class="chart-title">Isch de schmoun en spasst?</div>
-            <div echarts [options]="chartOption" class="chart" [autoResize]="true"></div>
-        </div>
-        <div class="chart-container">
-            <div class="chart-title">Isch de schmoun en spasst?</div>
-            <div echarts [options]="chartOption" class="chart" [autoResize]="true"></div>
+            <div echarts [options]="chartData[0]" class="chart" [autoResize]="true"></div>
         </div>
     </div>
 </main>

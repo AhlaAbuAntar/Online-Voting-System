@@ -13,28 +13,54 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  chartOption: EChartsOption = {
-    series: [
-      {
-        type: 'pie',
-        radius: '60%',
-        center: ['50%', '50%'],
-        data: [{
-          "value": 50,
-          "name": "Ja"
-        },
+  chartData: EChartsOption[] = [
+    {
+      series: [
+        {
+          type: 'pie',
+          radius: '60%',
+          center: ['50%', '50%'],
+          data: [{
+            "value": 50,
+            "name": "Ja"
+          },
           {
             "value": 40,
             "name": "Nein"
           }],
-        emphasis: {
-          itemStyle: {
-            shadowBlur: 10,
-            shadowOffsetX: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)',
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            }
           }
         }
-      }
-    ]
-  };
+      ]
+    },
+    {
+      series: [
+        {
+          type: 'pie',
+          radius: '60%',
+          center: ['50%', '50%'],
+          data: [{
+            "value": 60,
+            "name": "Ja"
+          },
+          {
+            "value": 30,
+            "name": "Nein"
+          }],
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            }
+          }
+        }
+      ]
+    },
+  ];
 }
