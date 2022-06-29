@@ -9,7 +9,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    this.http.get('https://api.myjson.com/bins/1hjq0j').subscribe(data => {
+    this.http.get('http://localhost:3000/vote').subscribe(data => {
       console.log(data);
     });
   }

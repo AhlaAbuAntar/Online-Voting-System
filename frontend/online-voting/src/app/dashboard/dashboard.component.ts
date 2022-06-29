@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EChartsOption } from 'echarts';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,10 +9,10 @@ import { EChartsOption } from 'echarts';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    
+    this.api.getData();
   }
 
   chartData: EChartsOption[] = [
