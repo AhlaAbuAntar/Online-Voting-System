@@ -1,3 +1,11 @@
-h1{
-    margin: auto;
+header{
+    background: aqua;
+    padding: 20vh;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+main div{
+    text-align: center;
 }
