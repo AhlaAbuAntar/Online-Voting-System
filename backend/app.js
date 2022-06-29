@@ -10,7 +10,7 @@ app.use((0, cors_1["default"])());
 var PORT = 3000;
 mongoose_1["default"].connect(process.env.CONNECTION_LINK);
 app.get("/", function (req, res) {
-    res.send("API started");
+    res.send("API started").status(200);
 });
 var vote_1 = require("./routes/vote");
 app.use("/vote", vote_1["default"]);

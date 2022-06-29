@@ -11,7 +11,7 @@ const PORT = 3000;
 mongoose.connect(process.env.CONNECTION_LINK!);
 
 app.get("/", (req, res) => {
-  res.send("API started");
+  res.send("API started").status(200);
 });
 
 import voteRouter from "./routes/vote";
