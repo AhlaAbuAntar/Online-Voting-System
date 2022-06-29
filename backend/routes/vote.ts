@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { Vote, IVote } from "../models/vote-model";
+import { Vote } from "../models/vote-model";
 
 //Get votes
 router.get("/", async (req, res) => {
@@ -23,7 +23,8 @@ router.post("/", async (req, res) => {
   try {
     const vote = req.body;
     const newVote = new Vote({
-      vote,
+      vote: vote.vote,
+      vote_name: vote.vote_name,
       date: Date.now(),
     });
 
