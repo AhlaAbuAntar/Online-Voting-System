@@ -3,7 +3,14 @@
 </header>
 
 <main>
-    <mat-card>
-        <mat-card-title *ngFor="let fragen in fragen"></mat-card-title>
-    </mat-card>
+  <mat-card *ngFor="let frage of fragen" class="mat-card">
+    <mat-card-title>{{ frage }}</mat-card-title>
+    <mat-card-header>Drücken Sie irgendein Knopf</mat-card-header>
+    <mat-card-content>
+        <label for="ja">Ja</label>
+        <input type="radio" value="ja" (click)="postVote('ja')">
+        <label for="ja">Ja</label>
+        <input type="radio" value="ja" (click)="postVote('ja')">
+    </mat-card-content>
+  </mat-card>
 </main>

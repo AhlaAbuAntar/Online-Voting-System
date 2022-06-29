@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-umfrage',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UmfrageComponent implements OnInit {
 
-  fragen = ["Rot oder blau?", "Blau oder Grün?", "Ist Muri die beste Ortschaft der Schweiz"]
-  constructor() { }
+  fragen = ["Messi ist besser als Ronaldo.", "Shamoun ist Marokkaner.", "Ist Muri die beste Ortschaft der Schweiz?"]
+  constructor(private eckes: ApiService) { }
+
+  postVote(value: string) {
+    this.eckes.postVote(value)
+  }
 
   ngOnInit(): void {
   }
