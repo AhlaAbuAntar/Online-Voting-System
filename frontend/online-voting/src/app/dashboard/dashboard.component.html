@@ -1,0 +1,39 @@
+<main>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Meine Umfragen</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="#" data-toggle="collapse" aria-expanded="false">Umfrage 1</a>
+            </li>
+            <li class="active">
+                <a href="#" data-toggle="collapse" aria-expanded="false">Umfrage 1</a>
+            </li>
+            <li class="active">
+                <a href="#" data-toggle="collapse" aria-expanded="false">Umfrage 1</a>
+            </li>
+            <li class="active">
+                <a href="#" data-toggle="collapse" aria-expanded="false">Umfrage 1</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+    <div id="main-container">
+        <div class="chart-container">
+            <div class="chart-title">Isch de schmoun en spasst?</div>
+            <div echarts [options]="chartData[0]" class="chart" [autoResize]="true"></div>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Isch de Alakxan en spasst?</div>
+            <div echarts [options]="chartData[1]" class="chart" [autoResize]="true"></div>
+        </div>
+        <div class="chart-container">
+            <div class="chart-title">Isch de schmoun en spasst?</div>
+            <div echarts [options]="chartData[0]" class="chart" [autoResize]="true"></div>
+        </div>
+    </div>
+</main>
