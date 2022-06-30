@@ -8,61 +8,12 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  hueneberg_vote: any;
 
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getData();
+    this.hueneberg_vote = this.api.getData();
+    console.log(this.hueneberg_vote);
   }
-
-  chartData: EChartsOption[] = [
-    {
-      series: [
-        {
-          type: 'pie',
-          radius: '60%',
-          center: ['50%', '50%'],
-          data: [{
-            "value": 50,
-            "name": "Ja"
-          },
-          {
-            "value": 40,
-            "name": "Nein"
-          }],
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)',
-            }
-          }
-        }
-      ]
-    },
-    {
-      series: [
-        {
-          type: 'pie',
-          radius: '60%',
-          center: ['50%', '50%'],
-          data: [{
-            "value": 60,
-            "name": "Ja"
-          },
-          {
-            "value": 30,
-            "name": "Nein"
-          }],
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)',
-            }
-          }
-        }
-      ]
-    },
-  ];
 }
