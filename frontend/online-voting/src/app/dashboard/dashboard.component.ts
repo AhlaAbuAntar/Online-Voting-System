@@ -9,6 +9,7 @@ import { ApiService } from '../services/api.service';
 })
 export class DashboardComponent implements OnInit {
   hueneberg_vote: any;
+  schmoun_vote: any;
 
   constructor(private api: ApiService) { }
 
@@ -28,6 +29,30 @@ export class DashboardComponent implements OnInit {
           },
           {
             "value": 5,
+            "name": "Nein"
+          }],
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            }
+          }
+        }
+      ]
+    };
+    this.schmoun_vote = {
+      series: [
+        {
+          type: 'pie',
+          radius: '60%',
+          center: ['50%', '50%'],
+          data: [{
+            "value": 20,
+            "name": "Ja"
+          },
+          {
+            "value": 20,
             "name": "Nein"
           }],
           emphasis: {
