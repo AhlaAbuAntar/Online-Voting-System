@@ -7,11 +7,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NgxEchartsModule } from 'ngx-echarts';
+import {MatCardModule} from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UmfragenComponent } from './umfragen/umfragen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    UmfragenComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +23,9 @@ import { NgxEchartsModule } from 'ngx-echarts';
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

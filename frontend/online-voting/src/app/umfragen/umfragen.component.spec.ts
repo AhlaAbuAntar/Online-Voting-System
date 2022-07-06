@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UmfrageComponent } from './umfrage.component';
+import { UmfragenComponent } from './umfragen.component';
 
-describe('UmfrageComponent', () => {
-  let component: UmfrageComponent;
-  let fixture: ComponentFixture<UmfrageComponent>;
+describe('UmfragenComponent', () => {
+  let component: UmfragenComponent;
+  let fixture: ComponentFixture<UmfragenComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UmfrageComponent ]
+      declarations: [ UmfragenComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UmfrageComponent);
+    fixture = TestBed.createComponent(UmfragenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
