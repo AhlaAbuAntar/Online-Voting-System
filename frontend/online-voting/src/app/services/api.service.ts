@@ -13,6 +13,10 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  postVote(value: string) {
+    this.http.post("http://localhost:3000/vote", value);
+  }
+
   getData() {
     this.http.get('http://localhost:3000/vote').subscribe((data: any) => {
       this.data = data.data;
@@ -30,7 +34,7 @@ export class ApiService {
             break;
         }
       }
-
+    
       this.hueneberg_vote = {
         series: [
           {
