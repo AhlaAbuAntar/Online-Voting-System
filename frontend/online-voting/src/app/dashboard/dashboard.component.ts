@@ -23,11 +23,11 @@ export class DashboardComponent implements OnInit {
           radius: '60%',
           center: ['50%', '50%'],
           data: [{
-            "value": "amogus",
+            "value": 10,
             "name": "Ja"
           },
           {
-            "value": "amogus",
+            "value": 5,
             "name": "Nein"
           }],
           emphasis: {
